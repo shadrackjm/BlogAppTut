@@ -1,0 +1,44 @@
+welcome back!
+-------------
+
+Today I'll be showing how to Create a Blog application in Laravel 11 and Livewire 3
+
+This app will have Realtime Updates powered by Livewire 3 Features..
+
+Features:(what we will cover)
+---------
+
+1.User Authentication: - part 1 - done...
+---------------------- 
+Allow users to register, login, and logout & recover their passwords.
+
+2.Dashboard: - part 2 - 
+---------------------- 
+Provide a dashboard for authenticated users to manage their blog posts.
+
+3.Crud on Posts: - part 3
+-------------------------
+Enable users to create new blog posts with a title, content, and optionally, 
+tags or categories.
+
+4.View Posts: - part 4
+---------------------- 
+Display a list of all blog posts on the home page or a dedicated blog page.
+
+5.Search and Filter: - part 5
+-----------------------------
+Implement search functionality to allow users to search for specific posts
+based on keywords or tags. Additionally,
+provide filtering options to sort posts by date, category, or other criteria.
+
+6.Comments: - part 6
+--------------------
+Allow readers to leave comments on blog posts.
+
+7.Subscribe: - part 7
+---------------------
+a user can subscribe to another user, thus posts will be personalized.
+
+8.Like & Unlike the post. - part 8
+----------------------------------
+
