@@ -1,3 +1,5 @@
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
 <p>This Project shows how to Create a Blog application in Laravel 11 and Livewire 3</p>
 <p>This app will have Realtime Updates powered by Livewire 3 Features..</p>
 <p>Features:(what we will cover)<br />-----------------------------</p>
