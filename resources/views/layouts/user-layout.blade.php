@@ -72,6 +72,7 @@
           </a>
         </li><!-- End Search Icon-->
 
+        <a href="/create/post" wire:navigate class="btn btn-outline-danger mx-2">create</a>
         <li class="nav-item dropdown">
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
@@ -280,16 +281,22 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="/home">
+        <a class="nav-link " href="/user/home" wire:navigate>
           <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
+          <span>Home page</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="/profile">
+        <a class="nav-link collapsed" href="/my/posts" wire:navigate>
+          <i class="bi bi-archive-fill"></i>
+          <span>My posts</span>
+        </a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="/profile" wire:navigate>
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>

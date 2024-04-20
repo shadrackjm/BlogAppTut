@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Livewire\MyPosts;
 
 Route::get('/', function () {
     return view('login-page');
@@ -29,4 +30,7 @@ Route::post('/reset/user/password',[AuthController::class,'ResetPassword'])->nam
 Route::get('/404',[AuthController::class,'load404']);
 // create controllers for each user
 Route::get('user/home',[UserController::class,'loadHomePage'])->middleware('user');
+Route::get('my/posts', [UserController::class,'loadMyPosts'])->middleware('user');
+Route::get('create/post', [UserController::class,'loadCreatePost'])->middleware('user');
+
 Route::get('admin/home',[AdminController::class,'loadHomePage'])->middleware('admin');
