@@ -1,5 +1,7 @@
 <div class="card">
-
+          @if (session()->has('message'))
+            <span class="alert alert-success p-2 my-2">{{ session('message') }}</span>
+          @endif
             <div class="card-body">
               <h5 class="card-title"> My Dashboard</h5>
               <div class="row">
@@ -50,10 +52,12 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
+                    <th scope="col">Image</th>
                     <th scope="col">Title</th>
                     <th scope="col">Content</th>
                     <th scope="col">Posted At</th>
                     <th scope="col">Last Updated</th>
+                    <th scope="col" colspan="2">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -62,9 +66,12 @@
                       <tr wire:key="{{$item->id}}">
                         <th scope="row">{{$loop->iteration}}</th>
                         <td>{{$item->post_title}}</td>
+                        <td><img height="40px" width="40px" src="{{ asset('storage/images/' .$item->photo) }}" alt="post image"></td>
                         <td>{{$item->content}}</td>
                         <td>{{$item->created_at}}</td>
                         <td>{{$item->updated_at}}</td>
+                        <td><a href="/edit/post/{{$item->id}}" wire:navigate class="btn btn-primary btn-sm">Edit</a></td>
+                        <td><button wire:click="deletePost({{$item->id}})" wire:confirm="Are you sure you want to delete this?" class="btn btn-danger btn-sm">Delete</button></td>
                       </tr>
                   @endforeach
                 </tbody>
