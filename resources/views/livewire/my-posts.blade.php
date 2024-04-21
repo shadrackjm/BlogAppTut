@@ -67,7 +67,7 @@
                         <th scope="row">{{$loop->iteration}}</th>
                         <td>{{$item->post_title}}</td>
                         <td><img height="40px" width="40px" src="{{ asset('storage/images/' .$item->photo) }}" alt="post image"></td>
-                        <td>{{$item->content}}</td>
+                        <td>{{str($item->content)->words(10)}}</td>
                         <td>{{$item->created_at}}</td>
                         <td>{{$item->updated_at}}</td>
                         <td><a href="/edit/post/{{$item->id}}" wire:navigate class="btn btn-primary btn-sm">Edit</a></td>

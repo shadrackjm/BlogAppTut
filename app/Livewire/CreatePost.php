@@ -24,12 +24,19 @@ class CreatePost extends Component
         ]);
         $photo_name = md5($this->photo . microtime()).'.'.$this->photo->extension();
         $this->photo->storeAs('public/images', $photo_name); //then we store image in this path
-        Post::insert([
-            'post_title' => $this->post_title,
-            'content' => $this->content,
-            'photo' => $photo_name,
-            'user_id' => auth()->user()->id,
-        ]);
+        
+        $createPost = new Post;
+        $createPost->post_title = $this->post_title;
+        $createPost->content = $this->content;
+        $createPost->photo = $photo_name;
+        $createPost->user_id = auth()->user()->id;
+        $createPost->save();
+        // Post::insert([
+        //     'post_title' => $this->post_title,
+        //     'content' => $this->content,
+        //     'photo' => $photo_name,
+        //     'user_id' => auth()->user()->id,
+        // ]);
 
         $this->post_title = '';
         $this->content = '';
