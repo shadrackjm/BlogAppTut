@@ -15,16 +15,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card" style="background-color: #db4662; font-size:20px;">
-                      <div class="card-body text-center text-white">
-                          Likes
-                      </div>
-                      <div class="card-footer text-center text-white"  style="background-color: #db4662">
-                        100
-                      </div>
-                    </div>
-                </div>
+                <livewire:post-data-counter />
                 <div class="col">
                     <div class="card" style="background-color: #3ade9f; font-size:20px;">
                       <div class="card-body text-center text-white">

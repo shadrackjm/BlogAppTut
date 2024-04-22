@@ -14,6 +14,8 @@ class MyPosts extends Component
         $user_id = auth()->user()->id;
         $this->my_posts = Post::where('user_id',$user_id)->get();
         $this->my_posts_count = Post::where('user_id',$user_id)->count();
+        // we were supposed to add here the statement to fetch number of post likes but that not a good prectice
+        // so let's create a separate component for this..
     }
     public function deletePost($id){
         Post::where('id',$id)->delete();

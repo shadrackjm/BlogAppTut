@@ -11,8 +11,10 @@
                                 {{-- here we will pass on which day the post was published --}}
                                 <i class="bi bi-calendar"></i>
                                 <span class="text-muted">{{date('D M Y h:i:s A',strtotime($post_data->created_at))}}</span> <br>
-                                <span class="text-muted">{{$post_data->name}}</span>
+                                <span class="text-capitalized">{{$post_data->name}}</span>
                             </div>
+                            {{-- let's shift this div to like component & let's pass post_id to this component --}}
+                            <livewire:like-component :postId="$post_data->id" />
                         </div>
                         <h2 class="text-primary">{{$post_data->post_title}}</h2>
                         <p>{{$post_data->content}}</p>
