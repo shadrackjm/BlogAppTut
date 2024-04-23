@@ -9,12 +9,18 @@
                     <p>{{str($post->content)->words(10)}}<a href="/view/post/{{$post->id}}" wire:navigate wire:click="addViewers({{$post->id}})" class="card-link mx-1">read more</a></p>
                     {{-- this functions will truncate the words above 10 --}}
                     <div class="row">
-                        <div class="col-xl-6"></div>
+                        <div class="col-xl-6">
+                            <small class="text-muted">{{date('d-m-Y h:i',strtotime($post->created_at))}}</small>
+                        </div>
                         <livewire:like-component :postId="$post->id" />
                     </div>
                 </div>
                 <div class="card-footer">
-                    <span class="text-muted mx-3 text-capitalize"> {{$post->name}}</span>
+                    {{-- here we use anchor tag to make both profile-image component and name be clickable --}}
+                    <a href="/view/profile/{{$post->user_id}}" wire:navigate>
+                        <livewire:profile-image :userId="$post->user_id" />
+                        <span class="text-muted mx-3 text-capitalize my-1"> {{$post->name}}</span>
+                    </a>
                     <livewire:follow-component :followedId="$post->followedId" /> 
                 </div>
             </div>

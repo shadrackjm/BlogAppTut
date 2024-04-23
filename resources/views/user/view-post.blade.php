@@ -10,8 +10,10 @@
                             <div class="col-xl-6">
                                 {{-- here we will pass on which day the post was published --}}
                                 <i class="bi bi-calendar"></i>
-                                <span class="text-muted">{{date('D M Y h:i:s A',strtotime($post_data->created_at))}}</span> <br>
+                                <span class="text-muted">{{date('d-m-Y h:i',strtotime($post_data->created_at))}}</span> <br>
+                                <livewire:profile-image :userId="$post_data->user_id" />
                                 <span class="text-capitalized">{{$post_data->name}}</span>
+                                <livewire:follow-component :followedId="$post_data->user_id" />
                             </div>
                             {{-- let's shift this div to like component & let's pass post_id to this component --}}
                             <livewire:like-component :postId="$post_data->id" />

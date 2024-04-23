@@ -38,13 +38,17 @@ Allow readers to leave comments on blog posts.
 ---------------------
 a user can subscribe/Follow to another user.
 
-8.user profiles: - part 8 (Today's task)
+8.user profiles: - part 8 - done
 -------------------------
 user can update their profiles also other users can see others profiles
 
-9.Search and Filter: - part 9
------------------------------
+9.show profiles on a post: - part 9 - done
+-------------------------
+other users can see others profiles on a post..
+
+10.Search and Filter: - part 10 (Today's task)
+-------------------------------
 Implement search functionality to allow users to search for specific posts
-based on keywords or tags. Additionally,
+based on keywords Additionally,
 provide filtering options to sort posts by date, category, or other criteria.
 

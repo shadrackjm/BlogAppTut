@@ -35,5 +35,6 @@ Route::get('create/post', [UserController::class,'loadCreatePost'])->middleware(
 Route::get('/edit/post/{post_id}', [UserController::class,'loadEditPost'])->middleware('user');
 Route::get('/view/post/{id}',[UserController::class,'loadPostPage'])->middleware('user');
 Route::get('/profile',[UserController::class,'loadProfile'])->middleware('user');
+Route::get('/view/profile/{user_id}',[UserController::class,'loadGuestProfile'])->middleware('user');
 
 Route::get('admin/home',[AdminController::class,'loadHomePage'])->middleware('admin');
