@@ -18,6 +18,9 @@
                         </div>
                         <h2 class="text-primary">{{$post_data->post_title}}</h2>
                         <p>{{$post_data->content}}</p>
+                        <hr>
+                        <h6 class="card-title">Leave a comment</h6>
+                        <livewire:post-comment :postId="$post_data->id"/>
                     </div>
                 </div>
             </div>

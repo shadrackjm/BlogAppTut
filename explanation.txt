@@ -26,20 +26,23 @@ be able to edit and delete their posts.
 ---------------------- 
 Display a list of all blog posts on the home page or a dedicated blog page.
 
-5.Like & Unlike the post. - part 5 (Today's task)
+5.Like & Unlike the post. - part 5 - done
 ----------------------------------
 Allow users to like and unlike posts
 
-6.Comments: - part 6
+6.Comments: - part 6 (Today's task)
 --------------------
 Allow readers to leave comments on blog posts.
 
-7.Subscribe: - part 7
+7.Subscribe /Follow: - part 7
 ---------------------
-a user can subscribe to another user, thus posts will be personalized.
+a user can subscribe/Follow to another user.
 
+8.user profiles: - part 8
+-------------------------
+user can update their profiles also other users can see others profiles
 
-8.Search and Filter: - part 8 
+9.Search and Filter: - part 9
 -----------------------------
 Implement search functionality to allow users to search for specific posts
 based on keywords or tags. Additionally,
