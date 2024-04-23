@@ -8,10 +8,10 @@
                 <div class="col">
                     <div class="card" style="background-color: #98a0e3; font-size:20px;">
                       <div class="card-body text-center text-white">
-                          Subscribers
+                          Followers
                       </div>
                       <div class="card-footer text-center text-white"  style="background-color: #98a0e3">
-                        100
+                        {{$follower_count}}
                       </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                           Comments
                       </div>
                       <div class="card-footer text-center text-white"  style="background-color: #3ade9f">
-                        100
+                        {{$comment_count}}
                       </div>
                     </div>
                 </div>
