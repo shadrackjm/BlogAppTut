@@ -46,7 +46,10 @@ user can update their profiles also other users can see others profiles
 -------------------------
 other users can see others profiles on a post..
 
-10.Search and Filter: - part 10 (Today's task)
+10.Show More posts on post page in the post view page - part 10 (Today's task)
+-----------------------------------------------------
+
+11.Search and Filter: - part 11 
 -------------------------------
 Implement search functionality to allow users to search for specific posts
 based on keywords Additionally,

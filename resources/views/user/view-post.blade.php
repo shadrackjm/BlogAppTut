@@ -11,8 +11,10 @@
                                 {{-- here we will pass on which day the post was published --}}
                                 <i class="bi bi-calendar"></i>
                                 <span class="text-muted">{{date('d-m-Y h:i',strtotime($post_data->created_at))}}</span> <br>
-                                <livewire:profile-image :userId="$post_data->user_id" />
-                                <span class="text-capitalized">{{$post_data->name}}</span>
+                                <a href="/view/profile/{{$post_data->user_id}}" wire:navigate>
+                                    <livewire:profile-image :userId="$post_data->user_id" />
+                                    <span class="text-muted mx-3 text-capitalize my-1"> {{$post_data->name}}</span>
+                                </a>
                                 <livewire:follow-component :followedId="$post_data->user_id" />
                             </div>
                             {{-- let's shift this div to like component & let's pass post_id to this component --}}
@@ -29,18 +31,9 @@
             <div class="col-xl-4">
                 <div class="card">
                     <div class="card-body pb-0">
-              <h5 class="card-title">Related Posts</h5>
+              <h5 class="card-title">More posts from {{$post_data->name}}</h5>
 
-              <div class="news">
-                <div class="post-item clearfix">
-                  <img src="assets/img/news-1.jpg" alt="">
-                  <h6><a href="#">Nihil blanditiis at in nihil autem</a></h6>
-                  <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
-                </div>
-
-
-              </div><!-- End sidebar recent posts-->
-
+              <livewire:related-post :userId="$post_data->user_id"/>
             </div>
                 </div>
             </div>
