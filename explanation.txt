@@ -30,11 +30,11 @@ Display a list of all blog posts on the home page or a dedicated blog page.
 ----------------------------------
 Allow users to like and unlike posts
 
-6.Comments: - part 6 (Today's task)
+6.Comments: - part 6 - done
 --------------------
 Allow readers to leave comments on blog posts.
 
-7.Subscribe /Follow: - part 7
+7.Subscribe /Follow: - part 7 (Today's task)
 ---------------------
 a user can subscribe/Follow to another user.
 

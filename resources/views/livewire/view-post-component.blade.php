@@ -14,7 +14,8 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <span class="text-muted"> {{$post->name}}</span> 
+                    <span class="text-muted mx-3 text-capitalize"> {{$post->name}}</span>
+                    <livewire:follow-component :followedId="$post->followedId" /> 
                 </div>
             </div>
         </div>

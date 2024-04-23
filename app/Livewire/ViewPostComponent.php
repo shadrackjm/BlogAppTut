@@ -12,7 +12,7 @@ class ViewPostComponent extends Component
     
     public function mount()
     {
-        $this->posts = Post::join('users','users.id','=','posts.user_id')->orderBy('created_at','desc')->get(['users.name','posts.*']); //this will fetch all posts and order them desc by date created also join the 
+        $this->posts = Post::join('users','users.id','=','posts.user_id')->orderBy('created_at','desc')->get(['users.name','users.id as followedId','posts.*']); //this will fetch all posts and order them desc by date created also join the 
         //user table to see each user with their posts..
     }
     public function addViewers($postId){
