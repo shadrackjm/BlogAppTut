@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\PasswordReset;
+use App\Models\UserProfile;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -34,6 +35,12 @@ class AuthController extends Controller
             $user->email = $request->email;
             $user->password = Hash::make( $request->password );
             $user->save();
+
+            // add user_id in user_profiles table
+            $user_profile = new UserProfile;
+            $user_profile->user_id = $user->id;
+            $user_profile->save();
+
             return redirect('/registration/form')->with('success','You Have been Registered Successfully!');
         } catch (\Exception $e) {
             return redirect('/registration/form')->with('error',$e->getMessage());
