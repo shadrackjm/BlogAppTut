@@ -26,14 +26,24 @@ class EditPost extends Component
             'post_title' => 'required',
             'content' => 'required',
         ]);
-        $photo_name = md5($this->photo . microtime()).'.'.$this->photo->extension();
-        $this->photo->storeAs('public/images', $photo_name);
-
-        Post::where('id',$this->post->id)->update([
+        if ($this->photo == null) {
+            Post::where('id',$this->post->id)->update([
+                'post_title' => $this->post_title,
+                'content' => $this->content,
+            ]);
+        }else{
+            $photo_name = md5($this->photo . microtime()).'.'.$this->photo->extension();
+            $this->photo->storeAs('public/images', $photo_name);
+            Post::where('id',$this->post->id)->update([
             'post_title' => $this->post_title,
             'content' => $this->content,
             'photo' => $photo_name,
         ]);
+        
+        }
+        
+
+        
         session()->flash('message', 'The post was successfully updated!');
         return $this->redirect('/my/posts',navigate: true);
     }

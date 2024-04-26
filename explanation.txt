@@ -52,3 +52,17 @@ other users can see others profiles on a post..
 11.show number of Followers & comments on dashboard
 ---------------------------------------------------
 
+so let me show what we will be building in this tutorial series..
+
+this is for the sake of having a short demo but the project have many 
+
+awesome features that you should never miss to see..
+
+so the project source codes.. are on my github
+
+so enjoy this journey.. 
+
+Learn and master Laravel 11 and Livewire 3...
+
+so see you on the first video..
+
